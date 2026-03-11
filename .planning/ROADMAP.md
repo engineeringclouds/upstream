@@ -62,7 +62,7 @@ correct before any data accumulates against them.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project contracts: go.mod fix, Provider interface, RawUpdate struct, testdata fixture, failing test stubs
+- [x] 01-01-PLAN.md — Project contracts: go.mod fix, Provider interface, RawUpdate struct, testdata fixture, failing test stubs
 - [ ] 01-02-PLAN.md — Azure provider TDD implementation: parseDate, parse, Fetch, all tests green
 - [ ] 01-03-PLAN.md — CLI wiring: main.go with fetch command, --since, --format flags
 - [ ] 01-04-PLAN.md — Quality gate: go vet/gofmt clean, error pattern audit, README
@@ -362,7 +362,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | In planning | - |
+| 1. Foundation | 1/4 | In progress | - |
 | 2. Azure Deployment | 0/TBD | Not started | - |
 | 3. Auth + Subscribers | 0/TBD | Not started | - |
 | 4. AI Classification | 0/TBD | Not started | - |
@@ -383,8 +383,8 @@ Plans:
 | REQ-001 | Phase 1 | Pending |
 | REQ-002 | Phase 1 | Pending |
 | REQ-003 | Phase 1 | Pending |
-| REQ-004 | Phase 1 | Pending |
-| REQ-005 | Phase 1 | Pending |
+| REQ-004 | Phase 1 | Complete |
+| REQ-005 | Phase 1 | Complete |
 | REQ-006 | Phase 11 | Pending |
 | REQ-007 | Phase 9 | Pending |
 | REQ-008 | Phase 10 | Pending |
@@ -454,14 +454,14 @@ Plans:
 | REQ-104 | Phase 2 | Pending |
 | REQ-105 | Phase 3 | Pending |
 | REQ-106 | Phase 4 | Pending |
-| REQ-110 | Phase 1 | Pending |
+| REQ-110 | Phase 1 | Complete |
 | REQ-111 | Phase 1 | Pending |
 | REQ-112 | Phase 1 | Pending |
 | REQ-113 | Phase 1 | Pending |
 | REQ-114 | Phase 1 | Pending |
 | REQ-115 | Phase 1 | Pending |
-| REQ-116 | Phase 1 | Pending |
-| REQ-117 | Phase 1 | Pending |
+| REQ-116 | Phase 1 | Complete |
+| REQ-117 | Phase 1 | Complete |
 
 **Total: 67/67 requirements mapped. No orphans.**
 
