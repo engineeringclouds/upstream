@@ -195,12 +195,12 @@ Full product requirements for the Upstream infrastructure change awareness platf
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| REQ-001 | Phase 1 | Pending |
-| REQ-002 | Phase 1 | Pending |
-| REQ-003 | Phase 1 | Pending |
+| REQ-001 | Phase 1 | Complete |
+| REQ-002 | Phase 1 | Complete |
+| REQ-003 | Phase 1 | Complete |
 | REQ-004 | Phase 1 | Pending |
 | REQ-005 | Phase 1 | Pending |
-| REQ-006 | Phase 11 | Pending |
+| REQ-006 | Phase 11 | Complete |
 | REQ-007 | Phase 9 | Pending |
 | REQ-008 | Phase 10 | Pending |
 | REQ-009 | Phase 10 | Pending |
@@ -272,9 +272,9 @@ Full product requirements for the Upstream infrastructure change awareness platf
 | REQ-110 | Phase 1 | Pending |
 | REQ-111 | Phase 1 | Pending |
 | REQ-112 | Phase 1 | Pending |
-| REQ-113 | Phase 1 | Pending |
-| REQ-114 | Phase 1 | Pending |
-| REQ-115 | Phase 1 | Pending |
+| REQ-113 | Phase 1 | Complete |
+| REQ-114 | Phase 1 | Complete |
+| REQ-115 | Phase 1 | Complete |
 | REQ-116 | Phase 1 | Pending |
 | REQ-117 | Phase 1 | Pending |
 
