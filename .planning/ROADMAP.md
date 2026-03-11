@@ -59,7 +59,13 @@ correct before any data accumulates against them.
 
 **Research flag**: No additional research needed. `encoding/xml` + `net/http` stdlib patterns are well-documented.
 
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Project contracts: go.mod fix, Provider interface, RawUpdate struct, testdata fixture, failing test stubs
+- [ ] 01-02-PLAN.md — Azure provider TDD implementation: parseDate, parse, Fetch, all tests green
+- [ ] 01-03-PLAN.md — CLI wiring: main.go with fetch command, --since, --format flags
+- [ ] 01-04-PLAN.md — Quality gate: go vet/gofmt clean, error pattern audit, README
 
 ---
 
@@ -356,7 +362,7 @@ correct before any data accumulates against them.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/4 | In planning | - |
 | 2. Azure Deployment | 0/TBD | Not started | - |
 | 3. Auth + Subscribers | 0/TBD | Not started | - |
 | 4. AI Classification | 0/TBD | Not started | - |
