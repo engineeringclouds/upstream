@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-foundation/01-02-PLAN.md (AzureProvider implementation)
-last_updated: "2026-03-11T01:56:41.153Z"
+stopped_at: Completed 01-foundation/01-03-PLAN.md (CLI entrypoint)
+last_updated: "2026-03-12T01:06:37.932Z"
 last_activity: 2026-03-11 — Plan 01-01 complete (go.mod, Provider interface, test stubs)
 progress:
   total_phases: 11
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
   percent: 50
 ---
 
@@ -49,6 +49,7 @@ Progress: [█████░░░░░] 50%
 
 *Updated after each plan completion*
 | Phase 01-foundation P02 | 4 | 1 tasks | 1 files |
+| Phase 01-foundation P03 | 10 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: parseDate tries four formats in order (live Azure space+Z first), returns error only when all fail
 - [Phase 01-foundation]: Items with unparseable pubDates get zero Published + slog.Warn (not dropped) to avoid silent data loss
 - [Phase 01-foundation]: Atom a10:updated used as fallback date; encoding/xml requires full namespace URI in struct tags
+- [Phase 01-foundation]: flag.ContinueOnError used in fetchCmd so parse errors flow through main() error path, keeping all os.Exit calls centralised in cmd/
+- [Phase 01-foundation]: cmd/ is the sole error terminal — internal/ always returns errors up the call stack; only main() calls os.Exit
 
 ### Pending Todos
 
@@ -81,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T01:56:41.151Z
-Stopped at: Completed 01-foundation/01-02-PLAN.md (AzureProvider implementation)
+Last session: 2026-03-12T01:06:37.930Z
+Stopped at: Completed 01-foundation/01-03-PLAN.md (CLI entrypoint)
 Resume file: None
