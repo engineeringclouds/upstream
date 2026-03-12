@@ -17,7 +17,7 @@ correct before any data accumulates against them.
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - Go CLI that fetches Azure Updates RSS, parses XML, prints formatted output to stdout
+- [x] **Phase 1: Foundation** - Go CLI that fetches Azure Updates RSS, parses XML, prints formatted output to stdout (completed 2026-03-12)
 - [ ] **Phase 2: Azure Deployment** - Cosmos DB storage, Container Apps infrastructure, Bicep IaC, basic public web UI
 - [ ] **Phase 3: Auth + Subscribers** - Magic link auth, subscriber signup, topic selection, preferences dashboard, taxonomy deliverable
 - [ ] **Phase 4: AI Classification** - Claude API integration, type/severity/service tagging per update, idempotency guard, cost controls
@@ -362,7 +362,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/4 | In Progress|  |
+| 1. Foundation | 4/4 | Complete   | 2026-03-12 |
 | 2. Azure Deployment | 0/TBD | Not started | - |
 | 3. Auth + Subscribers | 0/TBD | Not started | - |
 | 4. AI Classification | 0/TBD | Not started | - |

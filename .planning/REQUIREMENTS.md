@@ -270,8 +270,8 @@ Full product requirements for the Upstream infrastructure change awareness platf
 | REQ-105 | Phase 3 | Pending |
 | REQ-106 | Phase 4 | Pending |
 | REQ-110 | Phase 1 | Pending |
-| REQ-111 | Phase 1 | Pending |
-| REQ-112 | Phase 1 | Pending |
+| REQ-111 | Phase 1 | Complete |
+| REQ-112 | Phase 1 | Complete |
 | REQ-113 | Phase 1 | Complete |
 | REQ-114 | Phase 1 | Complete |
 | REQ-115 | Phase 1 | Complete |
