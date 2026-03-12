@@ -53,6 +53,60 @@ Format: `type(scope): description` (imperative present tense, under 72 chars)
 Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, `style`
 Scope: package or area (`provider/azure`, `store`, `web`, `deploy`)
 
+## Post-Phase Gate
+
+Every phase ends with a mandatory security review before merge. Run all checks from the repo root and resolve any findings before marking the phase complete.
+
+**1. Vulnerability scan**
+```bash
+govulncheck ./...
+```
+Must return no vulnerabilities. If `govulncheck` is not installed: `go install golang.org/x/vuln/cmd/govulncheck@latest`.
+
+**2. Secret/credential grep**
+```bash
+grep -rn \
+  -e 'api[_-]?key\s*[:=]' \
+  -e 'secret\s*[:=]' \
+  -e 'password\s*[:=]' \
+  -e 'token\s*[:=]' \
+  -e 'AccountKey=' \
+  -e 'DefaultEndpointsProtocol=' \
+  -e 'connectionString\s*[:=]' \
+  -e 'PRIVATE KEY' \
+  --include='*.go' --include='*.yaml' --include='*.yml' \
+  --include='*.json' --include='*.env' --include='*.toml' \
+  --exclude-dir='.git' --exclude-dir='testdata' \
+  .
+```
+Must return no matches in committed files. Matches in `testdata/` are acceptable only if they are clearly synthetic.
+
+**3. .gitignore coverage**
+Confirm these patterns are present:
+- `*.env` or `.env`
+- `*.pem`, `*.key`, `*.p12`, `*.pfx` (or `# secrets` equivalent)
+- Built binaries (e.g., `upstream`)
+
+**4. Dependency CVE check**
+```bash
+go list -m all | govulncheck -
+# or if using Nancy/Snyk in CI, run equivalent
+```
+Any dependency with a known CVE must be updated or explicitly accepted with a documented reason.
+
+**5. Hardcoded credential scan**
+```bash
+grep -rn \
+  -e '[A-Za-z0-9+/]\{40,\}' \
+  -e 'eyJ[A-Za-z0-9_-]\+\.' \
+  --include='*.go' \
+  --exclude-dir='.git' --exclude-dir='testdata' \
+  .
+```
+Review any matches — long base64 strings or JWT-shaped tokens must not appear in source.
+
+**Gate outcome**: All five checks must pass (zero findings or findings explicitly triaged) before a PR targeting `main` is approved.
+
 ## Current Phase: 1 — Foundation
 
 **Goal**: Go CLI that polls Azure Updates RSS, parses XML, prints formatted output to stdout.

@@ -30,6 +30,12 @@ go.work.sum
 # Built binary
 upstream
 
+# Secrets and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
 # Editor/IDE
 # .idea/
 # .vscode/
